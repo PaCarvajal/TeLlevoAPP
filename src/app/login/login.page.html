@@ -2,26 +2,26 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-card-title>
+    <mat-card>
+        <mat-card-title>
             <h1>TeLlevoApp</h1>
             <h3>Bienvenid@!</h3>
             <h3>Ingresa</h3>
-        </ion-card-title>
+        </mat-card-title>
 
-        <ion-card-content>
-            <ion-item>
-                <ion-label position="floating">Nombre de Usuario</ion-label>
-                <ion-input type="text" minlength="3"></ion-input>
-            </ion-item>
+        <mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label position="floating">Nombre de Usuario</mat-label>
+                <input type="text" minlength="3"></input>
+            </mat-form-field>
             <ion-item>
                 <ion-label position="floating">Contraseña</ion-label>
                 <ion-input type="password" minlength="3"></ion-input>
             </ion-item>
             <ion-button color="tertiary" shape="round">Ingresar</ion-button>
             <ion-label>¿Olvidaste tu contraseña? Recuperala aquí</ion-label>
-        </ion-card-content>
-    </ion-card>
+        </mat-card-content>
+    </mat-card>
 
 
 </ion-content>
