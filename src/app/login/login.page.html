@@ -2,20 +2,25 @@
 </ion-header>
 
 <ion-content>
+    <ion-card class="ion-margin-top ion-margin-start">
+        <ion-toolbar>
+            <ion-title size="large" class="">TeLlevoApp</ion-title>
+        </ion-toolbar>
 
-    <ion-toolbar>
-        <ion-title size="large" class="">TeLlevoApp</ion-title>
-    </ion-toolbar>
-    <ion-item>
-        <ion-label position="floating">Nombre de usuario</ion-label>
-        <ion-input type="string" [(ngModel)]="user.usuario"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" minlength="3" [(ngModel)]="user.password"></ion-input>
-    </ion-item>
-    <ion-button color="tertiary" shape="round" (click)="ingresar()">Ingresar</ion-button>
-    <br>
-    <ion-label [routerLink]="['/recover']">¿Olvidaste tu contraseña? Recuperala aquí</ion-label>
+        <ion-item class="ion-text-left">
+            <ion-label position="floating">Nombre de usuario</ion-label>
+            <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" minlength="3" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
 
+        <ion-item>
+            <ion-button color="tertiary" shape="round" (click)="ingresar()">Ingresar</ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-button (click)="recuperar()">¿Olvidaste tu contraseña?</ion-button>
+        </ion-item>
+    </ion-card>
 </ion-content>
