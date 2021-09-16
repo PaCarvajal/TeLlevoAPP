@@ -1,26 +1,44 @@
-<ion-header>
+<!--Este es el header que se ve en android, pero influye en la posición del header de ios :s -->
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title class="ion-text-center">
+            <div>
+                <img height="150px" width="150px" src="assets/insurance.png" alt="Logo TeLlevoApp">
+            </div>
+            <strong>TeLlevoApp</strong>
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
-
-<ion-content>
-    <ion-card class="ion-margin-top ion-margin-start">
+<!--Este es el header que se ve en ios, y no se ve en android (wtf)-->
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
         <ion-toolbar>
-            <ion-title size="large" class="">TeLlevoApp</ion-title>
+            <div class="ion-text-center">
+                <img height="150px" width="150px" src="assets/insurance.png" alt="Logo TeLlevoApp">
+            </div>
+            <ion-title size="large" class="ion-text-center">TeLlevoApp</ion-title>
         </ion-toolbar>
+    </ion-header>
 
-        <ion-item class="ion-text-left">
-            <ion-label position="floating">Nombre de usuario</ion-label>
-            <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" minlength="3" [(ngModel)]="user.password"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-button color="tertiary" shape="round" (click)="ingresar()">Ingresar</ion-button>
-        </ion-item>
-        <ion-item>
-            <ion-button (click)="recuperar()">¿Olvidaste tu contraseña?</ion-button>
-        </ion-item>
-    </ion-card>
+    <div id="container">
+        <form [formGroup]="loginForm" (ngSubmit)="ingresar()">
+            <ion-item [ngClass]="{'mensaje-error' : loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)}">
+                <ion-label position="floating">Usuario</ion-label>
+                <ion-input formControlName="user" required="true" type="text" minlength="3" [(ngModel)]="Nuser"></ion-input>
+            </ion-item>
+            <span class="help-block" *ngIf="loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)">
+                <small class="mensaje-error" *ngIf="loginForm.get('user').errors.required">Se requiere ingresar usuario</small>
+                <small class="mensaje-error" *ngIf="loginForm.get('user').errors.minlength">El usuario debe tener al menos 3 caracteres</small>
+            </span>
+            <ion-item [ngClass]="{'mensaje-error' : loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)}">
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input formControlName="password" required="true" type="password" minlength="3"></ion-input>
+            </ion-item>
+            <ng-container class="help-block" *ngIf="loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)">
+                <small class="mensaje-error" *ngIf="loginForm.get('password').errors.required">Se requiere ingresar contraseña</small>
+                <small class="mensaje-error" *ngIf="loginForm.get('password').errors.minlength">La contraseña debe tener al menos 3 caracteres</small>
+            </ng-container>
+            <ion-button [disabled]="!loginForm.valid" type="submit" expand="block" (click)="capturarUsuario()">Ingresar</ion-button>
+        </form>
+    </div>
 </ion-content>
