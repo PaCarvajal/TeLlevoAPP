@@ -1,14 +1,16 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>recover</ion-title>
-    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-item>
-        <ion-label position="floating">Nombre de usuario</ion-label>
-        <ion-input type="string" [(ngModel)]="user.usuario"></ion-input>
-    </ion-item>
-    <ion-button color="tertiary" shape="round" [routerLink]="['/login']">Recuperar</ion-button>
+    <ion-card>
+        <ion-card-header>
+            <ion-title>Recuperar Contraseña</ion-title>
+        </ion-card-header>
 
+        <ion-item>
+            <ion-label position="floating">Nombre de usuario</ion-label>
+            <ion-input type="string"></ion-input>
+        </ion-item>
+        <ion-button color="tertiary" shape="round" [routerLink]="['/login']">Recuperar</ion-button>
+    </ion-card>
 </ion-content>

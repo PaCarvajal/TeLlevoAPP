@@ -14,7 +14,7 @@ export class HomePage {
     // Se llama a la ruta activa y se obtiene sus parametros mediante una subscripcion
     this.activeroute.queryParams.subscribe(params => { // Utilizamos lambda
       if (this.router.getCurrentNavigation().extras.state) { // Validamos que en la navegacion actual tenga extras
-        this.data = this.router.getCurrentNavigation().extras.state.user; // Si tiene extra rescata lo enviado
+        this.data = this.router.getCurrentNavigation().extras.state.newUser; // Si tiene extra rescata lo enviado
         console.log(this.data) // Muestra por consola lo traido
       }else{this.router.navigate(["/login"])} // Si no tiene extra la navegacion actual navegar al login
     });
