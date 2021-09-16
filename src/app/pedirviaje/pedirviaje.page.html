@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>pedirviaje</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- HEADER -->
+<ion-toolbar class="ion-text-center" color="secondary" style="padding-top: 1.8em;">
+  <ion-toolbar-content slot="start" style="padding-left: 2em;">
+      <img height="30px" width="30px" src="assets/insurance.png" alt="Logo TeLlevoApp">
+  </ion-toolbar-content>
+  <ion-title class="font-monSB paddRight" mode="md">TeLlevoAPP</ion-title>
+</ion-toolbar>
 
+<!-- CUEPOR -->
 <ion-content>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <ion-title class="font-monSB" mode="md" style="color: #FFFFFF;">Que me lleven</ion-title>
+  </ion-toolbar>
 
+  <!-- hora y corto de viaje -->
+  <ion-card>
+    <ion-card-content>
+      <div>
+        <p class="font-monR">Hora de Salida: </p>
+        <ion-item>
+          <ion-datetime class="font-monSB" placeholder="00:00" displayFormat="HH:mm"></ion-datetime>
+        </ion-item>
+      </div>
+      <div style="padding-top: 2em;">
+        <p class="font-monR">Costo de viaje: </p>
+        <p class="font-monSB">$1.000</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- mapa -->
+  <ion-card>
+    <ion-card-content>
+      <img height="250px" width="300px" src="assets/mapa.png" alt="mapaDuoc">
+    </ion-card-content>
+  </ion-card>
+  
 </ion-content>
