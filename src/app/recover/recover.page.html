@@ -7,16 +7,23 @@
 </ion-toolbar>
 
 <!-- CUERPO  -->
-<ion-content  class="ion-text-center">
+<ion-content class="ion-text-center">
     <ion-card mode="md">
         <ion-card-header>
             <small style="font-size: medium;" class="font-monSB">Recuperar Contraseña</small>
         </ion-card-header>
-
-        <ion-item>
-            <ion-label class="font-monR" position="floating">Nombre de usuario</ion-label>
-            <ion-input type="string"></ion-input>
-        </ion-item>
-        <ion-button class="font-monR" color="secondary" [routerLink]="['/login']">Recuperar</ion-button>
+        <form [formGroup]="recoverForm">
+            <ion-item>
+                <ion-label class="font-monR" position="floating">Nombre de usuario</ion-label>
+                <ion-input formControlName="user" type="string"></ion-input>
+            </ion-item>
+            <ng-container class="help-block" *ngIf="recoverForm.get('user').errors && (recoverForm.get('user').touched || recoverForm.get('user').dirty)">
+                <small class="mensaje-error">Debe ingresar un usuario</small>
+            </ng-container>
+            <div style="margin-top: 2em;">
+                <ion-button class="font-monR" color="secondary" [disabled]="!recoverForm.valid" type="submit" [routerLink]="['/login']">Recuperar</ion-button>
+            </div>
+        </form>
     </ion-card>
+
 </ion-content>

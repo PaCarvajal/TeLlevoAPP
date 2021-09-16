@@ -17,4 +17,8 @@ export class RecoverPage implements OnInit {
       user:["",[Validators.required]]
     })
   }
+
+  recuperar() {
+    console.log(this.recoverForm.value);
+  }
 }

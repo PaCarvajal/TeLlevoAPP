@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<ion-toolbar class="ion-text-center paddTop" >
+<ion-toolbar class="ion-text-center paddTop">
     <img height="150px" width="150px" src="assets/insurance.png" alt="Logo TeLlevoApp">
     <ion-title class="font-monSB" mode="md">
         TeLlevoAPP
@@ -14,7 +14,7 @@
             <form [formGroup]="loginForm" (ngSubmit)="ingresar()">
                 <ion-item [ngClass]="{'mensaje-error' : loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)}">
                     <ion-label class="font-monR" position="floating">Usuario</ion-label>
-                    <ion-input formControlName="user" required="true" type="text" minlength="3" [(ngModel)]="newUser.newUsuario"></ion-input>
+                    <ion-input formControlName="user" type="text" [(ngModel)]="newUser.newUsuario"></ion-input>
                 </ion-item>
                 <span class="help-block" *ngIf="loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)">
                     <small class="mensaje-error" *ngIf="loginForm.get('user').errors.required">Se requiere ingresar usuario</small>
@@ -22,7 +22,7 @@
                 </span>
                 <ion-item [ngClass]="{'mensaje-error' : loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)}">
                     <ion-label class="font-monR" position="floating">Contraseña</ion-label>
-                    <ion-input formControlName="password" required="true" type="password" minlength="3" [(ngModel)]="newUser.newPass"></ion-input>
+                    <ion-input formControlName="password" type="password" [(ngModel)]="newUser.newPass"></ion-input>
                 </ion-item>
                 <ng-container class="help-block" *ngIf="loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)">
                     <small class="mensaje-error" *ngIf="loginForm.get('password').errors.required">Se requiere ingresar contraseña</small>
