@@ -1,18 +1,24 @@
-<ion-header [translucent]="true">
-</ion-header>
+<!-- HEADER -->
+<ion-toolbar class="ion-text-center" color="secondary" style="padding-top: 1.8em;">
+    <ion-toolbar-content slot="start" style="padding-left: 2em;">
+        <img height="30px" width="30px" src="assets/insurance.png" alt="Logo TeLlevoApp">
+    </ion-toolbar-content>
+    <ion-title class="font-monSB paddRight" mode="md">TeLlevoAPP</ion-title>
+</ion-toolbar>
 
-<ion-content>
+<!-- CUERPO -->
+<ion-content mode="ios">
     <ion-card>
-        <ion-card-header>
-            <strong>Bienvenid@! {{data.newUsuario}}</strong>
-
+        <ion-card-header class="ion-text-center">
+            <ion-card-title class="font-monR" style="padding-top: 1em;">Bienvenid@!</ion-card-title>
+            <small class="font-monR">{{data.newUsuario}}</small>
         </ion-card-header>
-        <ion-card-content class="ion-text-center">
-            <ion-title size="small">¿Qué quieres hacer hoy?</ion-title>
-            <ion-button>Llevar gente</ion-button>
-            <ion-button>Que me lleven</ion-button>
+        <ion-card-content class="ion-text-center font-monR">
+            <ion-card-title style="font-size: 0.9em; padding-bottom: 2em; padding-top: 1.5em;">¿Qué quieres hacer hoy?</ion-card-title>
+            <ion-button class="font-monR" color="secondary" style="margin-bottom: 1em;">Llevar gente</ion-button>
+            <ion-button class="font-monR" color="secondary" style="margin-bottom: 1em;">Que me lleven</ion-button>
         </ion-card-content>
-
-
     </ion-card>
+
+
 </ion-content>

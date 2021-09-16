@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+//fonts AGREGADO 
+@font-face {
+    font-family: 'MontserratR';
+    src: url('/assets/fonts/MontserratAlternates-Regular.ttf');
+}
+@font-face {
+    font-family: 'MontserratSB';
+    src: url('/assets/fonts/MontserratAlternates-SemiBold.ttf');
+}
