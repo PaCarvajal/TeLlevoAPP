@@ -3,20 +3,20 @@
     <ion-toolbar-content slot="start" style="padding-left: 2em;">
         <img height="30px" width="30px" src="assets/insurance.png" alt="Logo TeLlevoApp">
     </ion-toolbar-content>
-    <ion-title class="font-monSB paddRight" mode="md">TeLlevoAPP</ion-title>
+    <ion-title class="font-monSB" style="padding-right: 2em;" mode="md">TeLlevoAPP</ion-title>
 </ion-toolbar>
 
 <!-- CUERPO  -->
 <ion-content  class="ion-text-center">
-    <ion-card mode="ios">
+    <ion-card mode="md">
         <ion-card-header>
-            <small style="font-size: large;">Recuperar Contraseña</small>
+            <small style="font-size: medium;" class="font-monSB">Recuperar Contraseña</small>
         </ion-card-header>
 
         <ion-item>
-            <ion-label position="floating">Nombre de usuario</ion-label>
+            <ion-label class="font-monR" position="floating">Nombre de usuario</ion-label>
             <ion-input type="string"></ion-input>
         </ion-item>
-        <ion-button color="tertiary" shape="round" [routerLink]="['/login']">Recuperar</ion-button>
+        <ion-button class="font-monR" color="secondary" [routerLink]="['/login']">Recuperar</ion-button>
     </ion-card>
 </ion-content>
