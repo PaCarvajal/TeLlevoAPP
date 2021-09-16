@@ -9,7 +9,11 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
-  Nuser: "";
+  
+  newUser={
+    newUsuario:"",
+    newPass:""
+  }
 
   get user() {
     return this.loginForm.get('user')
@@ -31,17 +35,16 @@ export class LoginPage implements OnInit {
 
   public ingresar() {
     console.log(this.loginForm.value);
-  }
 
-  capturarUsuario() {
     let navigationExtras: NavigationExtras = {
       state: {
-        Nuser: this.Nuser
+        newUser: this.newUser 
       }
     };
-    this.router.navigate(['/home'],navigationExtras);
-
+    this.router.navigate(['/home'], navigationExtras);
   }
+  /**this.router.navigate(['/home'],navigationExtras);*/
+
   
 }
 

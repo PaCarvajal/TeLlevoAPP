@@ -24,7 +24,7 @@
         <form [formGroup]="loginForm" (ngSubmit)="ingresar()">
             <ion-item [ngClass]="{'mensaje-error' : loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)}">
                 <ion-label position="floating">Usuario</ion-label>
-                <ion-input formControlName="user" required="true" type="text" minlength="3" [(ngModel)]="Nuser"></ion-input>
+                <ion-input formControlName="user" required="true" type="text" minlength="3" [(ngModel)]="newUser.newUsuario"></ion-input>
             </ion-item>
             <span class="help-block" *ngIf="loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)">
                 <small class="mensaje-error" *ngIf="loginForm.get('user').errors.required">Se requiere ingresar usuario</small>
@@ -32,13 +32,13 @@
             </span>
             <ion-item [ngClass]="{'mensaje-error' : loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)}">
                 <ion-label position="floating">Contraseña</ion-label>
-                <ion-input formControlName="password" required="true" type="password" minlength="3"></ion-input>
+                <ion-input formControlName="password" required="true" type="password" minlength="3" [(ngModel)]="newUser.newPass"></ion-input>
             </ion-item>
             <ng-container class="help-block" *ngIf="loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)">
                 <small class="mensaje-error" *ngIf="loginForm.get('password').errors.required">Se requiere ingresar contraseña</small>
                 <small class="mensaje-error" *ngIf="loginForm.get('password').errors.minlength">La contraseña debe tener al menos 3 caracteres</small>
             </ng-container>
-            <ion-button [disabled]="!loginForm.valid" type="submit" expand="block" (click)="capturarUsuario()">Ingresar</ion-button>
+            <ion-button [disabled]="!loginForm.valid" type="submit" expand="block">Ingresar</ion-button>
         </form>
     </div>
 </ion-content>
