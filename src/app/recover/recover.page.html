@@ -21,7 +21,7 @@
                 <small class="mensaje-error">Debe ingresar un usuario</small>
             </ng-container>
             <div style="margin-top: 2em;">
-                <ion-button class="font-monR" color="secondary" [disabled]="!recoverForm.valid" type="submit" [routerLink]="['/login']">Recuperar</ion-button>
+                <ion-button class="font-monR" color="secondary" [disabled]="!recoverForm.valid" type="submit" (click)="recuperar()" [routerLink]="['/login']">Recuperar</ion-button>
             </div>
         </form>
     </ion-card>
