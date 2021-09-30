@@ -11,30 +11,41 @@
 <ion-content>
     <ion-card mode="md">
         <ion-card-content>
+            <!--Para realizar las validaciones de campo se crea un formGroup, es decir varios input que voy a validar dentro de un grupo-->
+            <!--También le digo de que forma voy a decirle cuando validar mediante el ngSubmit, donde se llama a la función ingresar-->
             <form [formGroup]="loginForm" (ngSubmit)="ingresar()">
+                <!--Aqui, en el primer item se le da un ngClass llamado mensaje-error, que fue declarado en el scss, se le indica que se active este estilo-->
+                <!--cuando exista un error en la validación del campo y además el campo haya sido tocado (touched) o se haya escrito algo incompleto o escrito y luego borrado (dirty)-->
                 <ion-item [ngClass]="{'mensaje-error' : loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)}">
                     <ion-label class="font-monR" position="floating">Usuario</ion-label>
+                    <!--el nombre se asocia con el formControlName que se declaró en el ts y también lo asignamos a ngModel para trasladarlo a otra ventana-->
                     <ion-input formControlName="user" type="text" [(ngModel)]="newUser.newUsuario"></ion-input>
                 </ion-item>
+                <!--Luego, se  crea un span que será el que muestre el mensaje de error bajo el input. donde también se usa la clase mensaje-error del scss y en este caso se-->
+                <!--utiliza lógica embebida en el codigo html mediante el ngIf, donde dependiendo del error, se entregan diferentes mensajes-->
                 <span class="help-block" *ngIf="loginForm.get('user').errors && (loginForm.get('user').touched || loginForm.get('user').dirty)">
                     <small class="mensaje-error" *ngIf="loginForm.get('user').errors.required">Se requiere ingresar usuario</small>
                     <small class="mensaje-error" *ngIf="loginForm.get('user').errors.minlength">El usuario debe tener al menos 3 caracteres</small>
                 </span>
+                <!-- en el caso de la contraseña de siguen los mismos pasos anteriores-->
                 <ion-item [ngClass]="{'mensaje-error' : loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)}">
                     <ion-label class="font-monR" position="floating">Contraseña</ion-label>
                     <ion-input formControlName="password" type="password" [(ngModel)]="newUser.newPass"></ion-input>
                 </ion-item>
+                <!--como se puede ver aquí, también se puede utilizar un ng-container en lugar del span, para la misma función-->
                 <ng-container class="help-block" *ngIf="loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)">
                     <small class="mensaje-error" *ngIf="loginForm.get('password').errors.required">Se requiere ingresar contraseña</small>
                     <small class="mensaje-error" *ngIf="loginForm.get('password').errors.minlength">La contraseña debe tener al menos 3 caracteres</small>
                 </ng-container>
                 <div style="margin-top: 2em;">
+                    <!--para el boton, le dimos el estado de disabled como predeterminado y se activa solo cuando los campos se rellenaron correctamente-->
                     <ion-button class="font-monR" color="secondary" [disabled]="!loginForm.valid" type="submit" mode="md" expand="block">Ingresar</ion-button>
                 </div>
             </form>
         </ion-card-content>
     </ion-card>
     <div class="ion-text-center font-monR" style="margin-top: 2em;">
+        <!--este link de recuperación de contraseña navega a otra ventana mediante el routerLink-->
         <a [routerLink]="['/recover']">¿Olvidaste tu contraseña?</a>
     </div>
 </ion-content>
