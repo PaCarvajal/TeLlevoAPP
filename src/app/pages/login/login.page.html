@@ -45,7 +45,6 @@
         </ion-card-content>
     </ion-card>
     <div class="ion-text-center font-monR" style="margin-top: 2em;">
-        <!--este link de recuperación de contraseña navega a otra ventana mediante el routerLink-->
-        <a [routerLink]="['/recover']">¿Olvidaste tu contraseña?</a>
+        <a (click)="presentAlert()">¿Olvidaste tu contraseña?</a>
     </div>
 </ion-content>
