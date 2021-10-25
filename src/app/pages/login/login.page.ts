@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, NavigationExtras } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
-import { dismiss } from '@ionic/core/dist/types/utils/overlays';
 
 @Component({
   selector: 'app-login',

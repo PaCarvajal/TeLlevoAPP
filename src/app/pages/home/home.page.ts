@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
-import { Animation, AnimationController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +23,11 @@ export class HomePage implements AfterViewInit{
         console.log(this.data) // Muestra por consola lo traido
       }else{this.router.navigate(["/login"])} // Si no tiene extra la navegacion actual navegar al login
     });
+  }
+
+  segmentChanged($event){
+    let direccion=$event.detail.value
+    this.router.navigate(['/home/'+direccion])
   }
   
   //ejemplo
