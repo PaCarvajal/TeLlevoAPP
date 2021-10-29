@@ -1,3 +1,35 @@
-<p>
-  comp-llevar works!
-</p>
+<ion-content [fullscrean]="true">
+  <ion-toolbar class="ion-text-center" color="primary">
+      <ion-title class="font-monSB" mode="md" style="color: #FFFFFF;">Llevar Gente</ion-title>
+  </ion-toolbar>
+
+  <!-- hora y corto de viaje -->
+  <ion-card>
+      <ion-card-content>
+          <div>
+              <p class="font-monR">Hora de Salida: </p>
+              <ion-item>
+                  <ion-datetime class="font-monSB" placeholder="00:00" displayFormat="HH:mm"></ion-datetime>
+              </ion-item>
+          </div>
+          <div style="padding-top: 2em;">
+            <ion-item>
+              <ion-label position="floating">Ingresa costo por viajero</ion-label>
+              <!-- aqui se asigna el dato obtenido desde el input al dato que se encuentra en page.ts con el mismo nombre -->
+              <ion-input type="numeric" [(ngModel)]="dato"></ion-input> 
+            </ion-item>
+          </div>
+      </ion-card-content>
+  </ion-card>
+
+  <!-- mapa -->
+  <ion-card>
+      <ion-card-content>
+          <img height="225px" width="300px" src="assets/mapa.png" alt="mapaDuoc">
+      </ion-card-content>
+  </ion-card>
+  <div class="ion-text-center">
+    <ion-button class="font-monR ion-text-center" color="secondary" style="margin-bottom: 1em;">Comenzar Viaje</ion-button>
+  </div>
+
+</ion-content>

@@ -37,14 +37,6 @@ export class LoginPage implements OnInit {
       password: ["", [Validators.required, Validators.minLength(3)]]
     })
   }
-  //aquí se crea el toast que mostraremos cuando el nombre de usuario para la recuperación de la contraseña se ha ingresado correctamente
-  async mostrarToast() {
-    await this.toast.create({
-      message: 'Tu contraseña fue enviada a tu correo',
-      duration: 3000,
-      position: 'bottom'
-    }).then(res => res.present())
-  }  
   
   //aquí se crea el componente Alert que se utilizará para recuperar la contraseña, consiste en una ventana emergente que se superpone al login
   async presentAlert() {
@@ -100,7 +92,14 @@ export class LoginPage implements OnInit {
     await alert.present();
   }
 
-
+  //aquí se crea el toast que mostraremos cuando el nombre de usuario para la recuperación de la contraseña se ha ingresado correctamente
+  async mostrarToast() {
+    await this.toast.create({
+      message: 'Tu contraseña fue enviada a tu correo',
+      duration: 3000,
+      position: 'bottom'
+    }).then(res => res.present())
+  }  
 
   public ingresar() { 
     /**este método se llama en el ngSubmit, que es cuando se presiona el botón ingresar ya que es parte del formGroup
@@ -113,7 +112,7 @@ export class LoginPage implements OnInit {
         newUser: this.newUser 
       }
     };
-    this.router.navigate(['/home'], navigationExtras);
+    this.router.navigate(['/home/micuenta'], navigationExtras);
   }
 
 

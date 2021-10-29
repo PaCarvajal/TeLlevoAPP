@@ -27,7 +27,7 @@ export class HomePage implements AfterViewInit{
 
   segmentChanged($event){
     let direccion=$event.detail.value
-    this.router.navigate(['/home/'+direccion])
+    this.router.navigate(['home/'+direccion])
   }
   
   //ejemplo

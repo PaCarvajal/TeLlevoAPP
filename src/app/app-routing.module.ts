@@ -15,14 +15,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'recover',
-    loadChildren: () => import('./recover/recover.module').then( m => m.RecoverPageModule)
-  },
-  {
-    path: 'pedirviaje',
-    loadChildren: () => import('./pedirviaje/pedirviaje.module').then( m => m.PedirviajePageModule)
-  },
+  // {
+  //   path: 'recover',
+  //   loadChildren: () => import('./recover/recover.module').then( m => m.RecoverPageModule)
+  // },
+  // {
+  //   path: 'pedirviaje',
+  //   loadChildren: () => import('./pedirviaje/pedirviaje.module').then( m => m.PedirviajePageModule)
+  // },
   {
     path: 'not-found',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)

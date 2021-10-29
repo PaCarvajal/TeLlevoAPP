@@ -15,11 +15,11 @@ export function playerFactory(){
 
 @NgModule({
   imports: [
-    LottieModule.forRoot({player:playerFactory}),
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    LottieModule.forRoot({player:playerFactory})
   ],
   declarations: [HomePage]
 })

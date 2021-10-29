@@ -8,31 +8,34 @@
 
 <!-- CUERPO -->
 <ion-content mode="ios">
-    <ion-card>
+    <!-- para mostrar el contenido de los componentes -->
+    <!-- esto despliega la info de los components -->
+    <ion-router-outlet></ion-router-outlet>
+    <!-- <ion-card>
         <ion-card-header class="ion-text-center">
             <div #bienvenida>
                 <ion-card-title class="font-monR">Bienvenid@!</ion-card-title>
             </div>
-            <small class="font-monR">{{data.newUsuario}}</small>
-            <!--Aquí se obtiene el nombre de usuario ingresado en el login, para mostrarlo por pantalla-->
+            interpolación
+            <small class="font-monR">{{data.newUsuario}}</small> 
+            Aquí se obtiene el nombre de usuario ingresado en el login, para mostrarlo por pantalla
         </ion-card-header>
         <ion-card-content class="ion-text-center font-monR">
-            <!-- animacion -->
-            <!--
+            animacion
             <div style="height: 120px;">
                 <ng-lottie [options]='options'></ng-lottie>
             </div>
+            Este botón navega hacia la página corespondiende para pedir un viaje
             <ion-card-title style="font-size: 0.9em; padding-bottom: 2em;">¿Qué quieres hacer hoy?</ion-card-title>
             <ion-button class="font-monR" color="secondary" style="margin-bottom: 1em;">Llevar gente</ion-button>
             <ion-button class="font-monR" color="secondary" style="margin-bottom: 1em;" [routerLink]="['/pedirviaje']">Que me lleven</ion-button>
-            -->
-            <!--Este botón navega hacia la página corespondiende para pedir un viaje-->
-        </ion-card-content>
-    </ion-card>
 
-    <ion-router-outlet></ion-router-outlet>
+        </ion-card-content>
+    </ion-card> -->
 </ion-content>
-<ion-footer>
+
+<!-- FOOTER -->
+<ion-footer style="background:rgb(255, 255, 255);" mode="md">
     <!--Se incluye el footer para implementar los segments al final de la pantalla, de acuerdo a como se utilizan actualmente-->
     <ion-segment (ionChange)="segmentChanged($event)">
         <ion-segment-button value="micuenta">

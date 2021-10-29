@@ -1,0 +1,99 @@
+﻿{
+    "viajes": [
+        {
+            "viajeId": "1",
+            "Hora ": "13:00",
+            "precio ": "1000"
+        },
+        {
+            "viajeId": "2",
+            "Hora ": "14:00",
+            "precio ": "1001"
+        },
+        {
+            "viajeId": "3",
+            "Hora ": "15:00",
+            "precio ": "1002"
+        },
+        {
+            "viajeId": "4",
+            "Hora ": "16:00",
+            "precio ": "1003"
+        },
+        {
+            "viajeId": "5",
+            "Hora ": "17:00",
+            "precio ": "1004"
+        },
+        {
+            "viajeId": "6",
+            "Hora ": "18:00",
+            "precio ": "1005"
+        },
+        {
+            "viajeId": "7",
+            "Hora ": "19:00",
+            "precio ": "1006"
+        },
+        {
+            "viajeId": "8",
+            "Hora ": "20:00",
+            "precio ": "1007"
+        },
+        {
+            "viajeId": "9",
+            "Hora ": "21:00",
+            "precio ": "1008"
+        },
+        {
+            "viajeId": "10",
+            "Hora ": "22:00",
+            "precio ": "1009"
+        },
+        {
+            "viajeId": "11",
+            "Hora ": "23:00",
+            "precio ": "1010"
+        },
+        {
+            "viajeId": "12",
+            "Hora ": "0:00",
+            "precio ": "1011"
+        },
+        {
+            "viajeId": "13",
+            "Hora ": "1:00",
+            "precio ": "1012"
+        },
+        {
+            "viajeId": "14",
+            "Hora ": "2:00",
+            "precio ": "1013"
+        },
+        {
+            "viajeId": "15",
+            "Hora ": "3:00",
+            "precio ": "1014"
+        },
+        {
+            "viajeId": "16",
+            "Hora ": "4:00",
+            "precio ": "1015"
+        },
+        {
+            "viajeId": "17",
+            "Hora ": "5:00",
+            "precio ": "1016"
+        },
+        {
+            "viajeId": "18",
+            "Hora ": "6:00",
+            "precio ": "1017"
+        },
+        {
+            "viajeId": "19",
+            "Hora ": "7:00",
+            "precio ": "1018"
+        }
+    ]
+}

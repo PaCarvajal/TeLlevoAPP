@@ -27,7 +27,7 @@
                     <small class="mensaje-error" *ngIf="loginForm.get('user').errors.required">Se requiere ingresar usuario</small>
                     <small class="mensaje-error" *ngIf="loginForm.get('user').errors.minlength">El usuario debe tener al menos 3 caracteres</small>
                 </span>
-                <!-- en el caso de la contraseña de siguen los mismos pasos anteriores-->
+                <!-- en el caso de la contraseña se siguen los mismos pasos anteriores-->
                 <ion-item [ngClass]="{'mensaje-error' : loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)}">
                     <ion-label class="font-monR" position="floating">Contraseña</ion-label>
                     <ion-input formControlName="password" type="password" [(ngModel)]="newUser.newPass"></ion-input>
