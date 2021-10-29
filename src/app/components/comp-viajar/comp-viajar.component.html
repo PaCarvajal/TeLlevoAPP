@@ -9,7 +9,7 @@
           <div>
               <p class="font-monR">Viajes disponibles </p>
               <ion-item>
-                <ion-select placeholder="Seleccione viaje" [(ngModel)]="Viaje">
+                <ion-select placeholder="Seleccione viaje" [(ngModel)]="Viajes">
                   <ion-select-option *ngFor="let vi of viajes" [value]="vi">{{vi.viajeId}}</ion-select-option>
                 </ion-select>
               </ion-item>

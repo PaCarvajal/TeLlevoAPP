@@ -19,6 +19,9 @@ export class CompViajarComponent implements OnInit{
 
   getViajes(){
     this.api.getViajes().subscribe((dato)=>{
+      console.log('Lista viajes');
+      console.log(dato);
+      
       this.viajes=dato;
     });
   }
