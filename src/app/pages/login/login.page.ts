@@ -95,6 +95,7 @@ export class LoginPage implements OnInit {
   //aquí se crea el toast que mostraremos cuando el nombre de usuario para la recuperación de la contraseña se ha ingresado correctamente
   async mostrarToast() {
     await this.toast.create({
+      cssClass: 'font-monR-blanca',
       message: 'Tu contraseña fue enviada a tu correo',
       duration: 3000,
       position: 'bottom'
