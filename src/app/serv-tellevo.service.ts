@@ -43,4 +43,6 @@ export class ServTellevoService {
   deleteViaje(viajeId):Observable<any>{ 
     return this.http.delete(this.apiURL+'/viajes/'+viajeId,this.httpOptions); 
   }
+
+
 }

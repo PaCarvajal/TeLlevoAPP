@@ -1,112 +1,111 @@
 {
-  "viajes": [
-    {
-      "viajeId": 1,
-      "hora": "13:00",
-      "precio": "1000",
-      "userId": 1
-    },
-    {
-      "viajeId": 2,
-      "hora": "14:00",
-      "precio": "1100",
-      "userId": 2
-    },
-    {
-      "viajeId": 3,
-      "hora": "15:00",
-      "precio": "1200",
-      "userId": 3
-    },
-    {
-      "viajeId": 4,
-      "hora": "16:00",
-      "precio": "1300",
-      "userId": 4
-    },
-    {
-      "viajeId": 5,
-      "hora": "17:00",
-      "precio": "1400",
-      "userId": 5
-    },
-    {
-      "viajeId": 6,
-      "hora": "18:00",
-      "precio ": "1500",
-      "userId": 1
-    },
-    {
-      "viajeId": 7,
-      "hora": "19:00",
-      "precio": "1600",
-      "userId": 2
-    },
-    {
-      "viajeId": 8,
-      "hora": "20:00",
-      "precio": "1700",
-      "userId": 3
-    },
-    {
-      "viajeId": 9,
-      "hora": "21:00",
-      "precio": "1800",
-      "userId": 4
-    },
-    {
-      "viajeId": 10,
-      "hora": "22:00",
-      "precio": "1900",
-      "userId": 5
-    },
-    {
-      "id": 11,
-      "viajeId": 11,
-      "hora": "2021-11-05T03:27:13.087-03:00",
-      "precio": "1231",
-      "origen": "sdaasd",
-      "destino": "asdas"
-    },
-    {
-      "id": 12,
-      "viajeId": 12,
-      "hora": "2021-11-05T03:28:05.961-03:00",
-      "precio": "1000",
-      "origen": "concon",
-      "destino": "duoc"
-    },
-    {
-      "id": 13,
-      "viajeId": 13,
-      "hora": "",
-      "precio": "",
-      "origen": "",
-      "destino": ""
-    },
-    {
-      "id": 14,
-      "viajeId": 14,
-      "hora": "",
-      "precio": "32423",
-      "origen": "2342",
-      "destino": "243"
-    },
-    {
-      "id": 15,
-      "viajeId": 15,
-      "hora": "2021-11-05T03:55:35.353-03:00",
-      "precio": "",
-      "origen": "",
-      "destino": ""
-    },
-    {
-      "id": 16,
-      "viajeId": 16,
-      "hora": "2021-11-05T03:57:40.472-03:00",
-      "precio": "2123",
-      "origen": "asdsa",
-      "destino": "dsadsa"
-    }
-  ]
+    "viajes": [{
+            "viajeId": 1,
+            "hora": "13:00",
+            "precio": "1000",
+            "userId": 1
+        },
+        {
+            "viajeId": 2,
+            "hora": "14:00",
+            "precio": "1100",
+            "userId": 2
+        },
+        {
+            "viajeId": 3,
+            "hora": "15:00",
+            "precio": "1200",
+            "userId": 3
+        },
+        {
+            "viajeId": 4,
+            "hora": "16:00",
+            "precio": "1300",
+            "userId": 4
+        },
+        {
+            "viajeId": 5,
+            "hora": "17:00",
+            "precio": "1400",
+            "userId": 5
+        },
+        {
+            "viajeId": 6,
+            "hora": "18:00",
+            "precio ": "1500",
+            "userId": 1
+        },
+        {
+            "viajeId": 7,
+            "hora": "19:00",
+            "precio": "1600",
+            "userId": 2
+        },
+        {
+            "viajeId": 8,
+            "hora": "20:00",
+            "precio": "1700",
+            "userId": 3
+        },
+        {
+            "viajeId": 9,
+            "hora": "21:00",
+            "precio": "1800",
+            "userId": 4
+        },
+        {
+            "viajeId": 10,
+            "hora": "22:00",
+            "precio": "1900",
+            "userId": 5
+        },
+        {
+            "id": 11,
+            "viajeId": 11,
+            "hora": "2021-11-05T03:27:13.087-03:00",
+            "precio": "1231",
+            "origen": "sdaasd",
+            "destino": "asdas"
+        },
+        {
+            "id": 12,
+            "viajeId": 12,
+            "hora": "2021-11-05T03:28:05.961-03:00",
+            "precio": "1000",
+            "origen": "concon",
+            "destino": "duoc"
+        },
+        {
+            "id": 13,
+            "viajeId": 13,
+            "hora": "",
+            "precio": "",
+            "origen": "",
+            "destino": ""
+        },
+        {
+            "id": 14,
+            "viajeId": 14,
+            "hora": "",
+            "precio": "32423",
+            "origen": "2342",
+            "destino": "243"
+        },
+        {
+            "id": 15,
+            "viajeId": 15,
+            "hora": "2021-11-05T03:55:35.353-03:00",
+            "precio": "",
+            "origen": "",
+            "destino": ""
+        },
+        {
+            "id": 16,
+            "viajeId": 16,
+            "hora": "2021-11-05T03:57:40.472-03:00",
+            "precio": "2123",
+            "origen": "asdsa",
+            "destino": "dsadsa"
+        }
+    ]
 }

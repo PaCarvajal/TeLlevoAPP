@@ -10,7 +10,7 @@ import { ServTellevoService } from 'src/app/serv-tellevo.service'; //prueba
 })
 export class HomePage {  //implements AfterViewInit
   data: any;
-
+  
   //Lottie animartion
   options:AnimationOptions = {
     path:'assets/car.json'
