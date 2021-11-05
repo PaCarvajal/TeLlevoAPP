@@ -1,6 +1,5 @@
 ﻿{
-    "viajes": [
-        {
+    "viajes": [{
             "viajeId": "1",
             "Hora ": "13:00",
             "precio ": "1000"

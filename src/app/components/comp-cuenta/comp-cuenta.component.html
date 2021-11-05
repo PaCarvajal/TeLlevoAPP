@@ -1,23 +1,23 @@
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-header class="ion-text-center">
-        <div #bienvenida>
-            <ion-card-title class="font-monR">Bienvenid@!</ion-card-title>
-        </div>
-        <!-- interpolación -->
-        <small class="font-monR">{{data.newUsuario}}</small> 
-        <!-- Aquí se obtiene el nombre de usuario ingresado en el login, para mostrarlo por pantalla -->
-    </ion-card-header>
-    <ion-card-content class="ion-text-center font-monR">
-      <ion-card-title style="font-size: 0.9em; padding-bottom: 2em;">¿Qué quieres hacer hoy?</ion-card-title>
-        <!-- animacion -->
-        <div style="height: 120px;">
-            <ng-lottie [options]='home/options'></ng-lottie>
-        </div>
+    <ion-card>
+        <ion-card-header class="ion-text-center">
+            <div #bienvenida>
+                <ion-card-title class="font-monR">Bienvenid@!</ion-card-title>
+            </div>
+            <!-- interpolación -->
+            <small class="font-monR">{{usuarioActual}}</small>
+            <!-- Aquí se obtiene el nombre de usuario ingresado en el login, para mostrarlo por pantalla -->
+        </ion-card-header>
+        <ion-card-content class="ion-text-center font-monR">
+            <ion-card-title style="font-size: 0.9em; padding-bottom: 2em;">¿Qué quieres hacer hoy?</ion-card-title>
+            <!-- animacion -->
+            <div style="height: 120px;">
+                <ng-lottie [options]='home/options'></ng-lottie>
+            </div>
 
-    </ion-card-content>
-  </ion-card>
-  <div class="ion-text-center">
-    <ion-button class="font-monR" color="secondary" type="submit" mode="md" expand="block" (click)="salir()">Cerrar sesión</ion-button>
-  </div>
+        </ion-card-content>
+    </ion-card>
+    <div class="ion-text-center">
+        <ion-button class="font-monR" color="secondary" type="submit" mode="md" expand="block" (click)="salir()">Cerrar sesión</ion-button>
+    </div>
 </ion-content>

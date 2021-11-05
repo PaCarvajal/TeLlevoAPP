@@ -19,14 +19,14 @@ export class ServTellevoService {
   constructor(private http:HttpClient) { }
 
   //Obtener viajes
-  getViajes():Observable<any>{
-    return this.http.get(this.apiURL+'/viajes').pipe(
+  getUsuarios():Observable<any>{
+    return this.http.get(this.apiURL+'/usuarios').pipe(
       retry(3)
     );
   }
   //Obtener vieje
-  getViaje(viajeId):Observable<any>{
-    return this.http.get(this.apiURL+'/viaje/'+viajeId).pipe(
+  getUsuario(username):Observable<any>{
+    return this.http.get(this.apiURL+'/usuarios/'+username).pipe(
       retry(3));
   }
   //crear un viaje

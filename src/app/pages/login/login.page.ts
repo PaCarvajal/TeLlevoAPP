@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, NavigationExtras } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
+import { ServTellevoService } from 'src/app/serv-tellevo.service';
+import { BDLocalService } from 'src/app/services/bdlocal.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup; //aqui le decimos que el login form es un form group
-  
+
   newUser={ //aqui le indicamos que campos que usaremos con el navigationExtras (la password de momento no se utiliza)
     newUsuario:"",
     newPass:""
@@ -25,7 +27,12 @@ export class LoginPage implements OnInit {
   }
   
 
-  constructor(private form: FormBuilder, private router: Router, public alertController:AlertController, public toast:ToastController) {
+  constructor(private form: FormBuilder, 
+              private router: Router, 
+              public alertController:AlertController, 
+              public toast:ToastController,
+              private api: ServTellevoService, 
+              private bdlocal: BDLocalService ) {
     }
   
     
@@ -107,7 +114,7 @@ export class LoginPage implements OnInit {
      * y lo que hace es enviar las credenciales por consola, navegar a la siguiente página y además utiliza el navigationExtras
      * para mandar el nombre de usuario a home y poder mostrarlo por pantalla*/
     console.log(this.loginForm.value);
-
+    this.bdlocal.guardarSesion(this.newUser.newUsuario);
     let navigationExtras: NavigationExtras = {
       state: {
         newUser: this.newUser 
@@ -131,8 +138,9 @@ export class LoginPage implements OnInit {
         }
     }
 }
+
+
+
 }
 
-
-  
 

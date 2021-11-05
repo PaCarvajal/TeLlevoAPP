@@ -14,6 +14,14 @@
             "lastname": "Carvajal",
             "email": "pa.carvajall@duocuc.cl",
             "phone": "987654321"
+        },
+        {
+            "username": "su.peruser",
+            "password": "super1234",
+            "firstname": "Super",
+            "lastname": "Usuario",
+            "email": "su.peruser@duocuc.cl",
+            "phone": "976578946"
         }
     ]
 }

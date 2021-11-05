@@ -9,7 +9,7 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class HomePage implements AfterViewInit{
   data: any;
-
+  
   //Lottie animartion
   options:AnimationOptions = {
     path:'assets/car.json'
