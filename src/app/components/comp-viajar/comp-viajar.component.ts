@@ -9,6 +9,7 @@ import { ServTellevoService } from 'src/app/serv-tellevo.service';
 export class CompViajarComponent implements OnInit{
   viajes:any;
 
+
   constructor(private api: ServTellevoService) { }
   
   ngOnInit(){}
@@ -18,11 +19,15 @@ export class CompViajarComponent implements OnInit{
   }
 
   getViajes(){
-    this.api.getViajes().subscribe((dato)=>{
+    this.api.getViajes().subscribe(
+      (dato)=>{
       console.log('Lista viajes');
       console.log(dato);
       
       this.viajes=dato;
+      
+    }, (error)=>{
+      console.log(error);
     });
   }
 
@@ -30,35 +35,6 @@ export class CompViajarComponent implements OnInit{
   //   this.api.getViaje(viajeId).subscribe((dato)=>{
   //     this.viaje=dato;
   //   });
-  // }
-
-  // guardarViaje(){
-  //   if(this.viaje.viajeId==null){
-  //     if(this.viaje==undefined){
-  //       console.log("Seleccione un viaje");
-  //       return;
-  //     }
-  //     this.viaje.viajeId=this.viaje.viajeId;
-  //     this.api.createViaje(this.viaje).subscribe(
-  //       ()=>{
-  //         console.log("Creado Correctamente");
-  //         this.getViajes();
-  //       },
-  //       error=>{
-  //         console.log("Error "+error)
-  //       }
-  //     );
-  //   }else{
-  //     this.api.updateViaje(this.viaje.viajeId).subscribe(
-  //       ()=>{
-  //         console.log("Actualizado Correctamente");
-  //         this.getViajes();
-  //       },
-  //       error=>{
-  //         console.log("Error "+error)
-  //       }
-  //     );
-  //   }
   // }
 
 }

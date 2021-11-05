@@ -24,7 +24,8 @@ const routes: Routes = [
   //   loadChildren: () => import('./pedirviaje/pedirviaje.module').then( m => m.PedirviajePageModule)
   // },
   {
-    path: 'not-found',
+    //esta listo 
+    path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
 
