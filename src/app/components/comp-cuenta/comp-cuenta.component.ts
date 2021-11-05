@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
-import { BDLocalService } from 'src/app/services/bdlocal.service';
 
 @Component({
   selector: 'app-comp-cuenta',
@@ -10,7 +9,6 @@ import { BDLocalService } from 'src/app/services/bdlocal.service';
 })
 export class CompCuentaComponent implements OnInit {
   data: any;
-  bdlocal: BDLocalService;
   //Lottie animartion
   options:AnimationOptions = {
     path:'assets/car.json'
