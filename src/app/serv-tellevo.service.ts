@@ -24,14 +24,14 @@ export class ServTellevoService {
       retry(3)
     );
   }
-  //Obtener vieje
+  //Obtener viaje
   getViaje(viajeId):Observable<any>{
-    return this.http.get(this.apiURL+'/viaje/'+viajeId).pipe(
+    return this.http.get(this.apiURL+'/viajes/'+viajeId).pipe(
       retry(3));
   }
-  //crear un usuario
+  //crear un viaje
   createViaje(viajeId):Observable<any>{ 
-    return this.http.post(this.apiURL+'/viaje/',viajeId,this.httpOptions) .pipe( 
+    return this.http.post(this.apiURL+'/viajes/',viajeId,this.httpOptions).pipe( 
       retry(3)); 
     }
   //modificar un viaje

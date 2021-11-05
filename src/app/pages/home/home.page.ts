@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
+import { ServTellevoService } from 'src/app/serv-tellevo.service'; //prueba
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements AfterViewInit{
+export class HomePage {  //implements AfterViewInit
   data: any;
 
   //Lottie animartion
@@ -15,7 +16,7 @@ export class HomePage implements AfterViewInit{
     path:'assets/car.json'
   }
 
-  constructor(private activeroute: ActivatedRoute, private router: Router) {
+  constructor(private activeroute: ActivatedRoute, private router: Router, private api: ServTellevoService) { //prueba
     // Se llama a la ruta activa y se obtiene sus parametros mediante una subscripcion
     this.activeroute.queryParams.subscribe(params => { // Utilizamos lambda
       if (this.router.getCurrentNavigation().extras.state) { // Validamos que en la navegacion actual tenga extras
@@ -25,13 +26,13 @@ export class HomePage implements AfterViewInit{
     });
   }
 
-  segmentChanged($event){
-    let direccion=$event.detail.value
+  segmentChanged(event: any){
+    let direccion=event.detail.value
     this.router.navigate(['home/'+direccion])
   }
   
-  //ejemplo
-  ngAfterViewInit(){
-  }
+  // //ejemplo
+  // ngAfterViewInit(){
+  // }
 
 }

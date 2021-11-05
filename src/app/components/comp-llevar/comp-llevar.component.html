@@ -9,14 +9,20 @@
           <div>
               <p class="font-monR">Hora de Salida: </p>
               <ion-item>
-                  <ion-datetime class="font-monSB" placeholder="00:00" picker-format="HH:mm" displayFormat="HH:mm"></ion-datetime>
+                  <ion-datetime class="font-monSB" placeholder="00:00" picker-format="HH:mm" displayFormat="HH:mm" [(ngModel)]="viaje.hora"></ion-datetime>
               </ion-item>
-          </div>
-          <div style="padding-top: 2em;">
             <ion-item>
-              <ion-label position="floating">Ingresa costo por viajero</ion-label>
+              <ion-label position="floating">Costo por viajero</ion-label>
               <!-- aqui se asigna el dato obtenido desde el input al dato que se encuentra en page.ts con el mismo nombre -->
-              <ion-input type="numeric" [(ngModel)]="dato"></ion-input> 
+              <ion-input type="numeric" [(ngModel)]="viaje.precio"></ion-input> 
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Origen</ion-label>
+              <ion-input type="text" [(ngModel)]="viaje.origen"></ion-input> 
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Destino</ion-label>
+              <ion-input type="text" [(ngModel)]="viaje.destino"></ion-input> 
             </ion-item>
           </div>
       </ion-card-content>
@@ -29,7 +35,7 @@
       </ion-card-content>
   </ion-card>
   <div class="ion-text-center">
-    <ion-button class="font-monR ion-text-center" color="secondary" style="margin-bottom: 1em;">Comenzar Viaje</ion-button>
+    <ion-button class="font-monR ion-text-center" color="secondary" style="margin-bottom: 1em;" (click)="createViaje()">Agendar Viaje</ion-button>
   </div>
 
 </ion-content>
