@@ -20,3 +20,7 @@ Prueba Paty!! :D ╰（‵□′）╯
     Para Storage:
 
     npm install @ionic/storage-angular
+
+    npm install @ionic-native/core@beta @ionic-native/google-maps@beta
+
+    npm i https://github.com/mapsplugin/cordova-plugin-googlemaps#multiple_maps
