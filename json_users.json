@@ -1,5 +1,6 @@
 {
     "usuarios": [{
+            "id": "1",
             "username": "isa.moreno",
             "password": "isa1234",
             "firstname": "Isabella",
@@ -8,6 +9,7 @@
             "phone": "912345678"
         },
         {
+            "id": "2",
             "username": "pa.carvajall",
             "password": "paty1234",
             "firstname": "Patricia",
@@ -16,6 +18,7 @@
             "phone": "987654321"
         },
         {
+            "id": "3",
             "username": "su.peruser",
             "password": "super1234",
             "firstname": "Super",

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, EmailValidator } from '@angular/forms';
 import { Router, NavigationExtras } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 import { ServTellevoService } from 'src/app/serv-tellevo.service';
@@ -18,6 +18,16 @@ export class LoginPage implements OnInit {
     newPass:""
   }
 
+  loginUser={
+    id: null, 
+    username: null,
+    password:null,
+    firstname: null,
+    lastname: null,
+    email: null,
+    phone: null
+  }
+
   get user() { //aquí le indicamos al loginform que datos tiene que obtener mediante las etiquetas que se utilizan en el HTML
     return this.loginForm.get('user')
   }
@@ -31,7 +41,6 @@ export class LoginPage implements OnInit {
               private router: Router, 
               public alertController:AlertController, 
               public toast:ToastController,
-              private api: ServTellevoService, 
               private bdlocal: BDLocalService ) {
     }
   
@@ -139,7 +148,9 @@ export class LoginPage implements OnInit {
     }
 }
 
-
+autenticarUsuario(usuario) {
+  
+}
 
 }
 
