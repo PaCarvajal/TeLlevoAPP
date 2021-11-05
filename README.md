@@ -10,7 +10,7 @@ Prueba Paty!! :D ╰（‵□′）╯
     - El createViaje tmb esta funcionando y se guarda en el Json, le integré alert a la mala en el componente llevar.
 -API Nativa: (no alcancé a instalar todo)
     geolocalización:
-    npm i cordova-plugin-geolocation
+    npm i cordova-plugin-geolocation --> no instalar 
     npm install @ionic-native/geolocation
 
     google maps:
@@ -20,7 +20,3 @@ Prueba Paty!! :D ╰（‵□′）╯
     Para Storage:
 
     npm install @ionic/storage-angular
-
-    npm install @ionic-native/core@beta @ionic-native/google-maps@beta
-
-    npm i https://github.com/mapsplugin/cordova-plugin-googlemaps#multiple_maps
