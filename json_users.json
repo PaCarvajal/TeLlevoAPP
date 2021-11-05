@@ -1,0 +1,19 @@
+{
+    "usuarios": [{
+            "username": "isa.moreno",
+            "password": "isa1234",
+            "firstname": "Isabella",
+            "lastname": "Moreno",
+            "email": "isa.moreno@duocuc.cl",
+            "phone": "912345678"
+        },
+        {
+            "username": "pa.carvajall",
+            "password": "paty1234",
+            "firstname": "Patricia",
+            "lastname": "Carvajal",
+            "email": "pa.carvajall@duocuc.cl",
+            "phone": "987654321"
+        }
+    ]
+}
