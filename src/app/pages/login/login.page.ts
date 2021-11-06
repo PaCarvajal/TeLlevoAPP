@@ -11,7 +11,7 @@ import { BDlocalService } from 'src/app/services/bdlocal.service';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup; //aqui le decimos que el login form es un form group
-  autenticacion: boolean;
+  //+9/autenticacion: boolean;
   newUser={ //aqui le indicamos que campos que usaremos con el navigationExtras (la password de momento no se utiliza)
     newUsuario:"",
     newPass:""
@@ -115,9 +115,9 @@ export class LoginPage implements OnInit {
     /*esta función de guardar usuario se creó para poder guardar usuarios en el local storage que luego serán comparados con la
      *autenticación, por lo tanto primero se activa esa, se guardan los usuarios a probar y luego se desactiva y se activa el bloque
      *de autenticación. Esto fue desarrollado de esta manera por que se pretende utilizar las cuentas de duoc, por lo que
-     *no tenía sentido implementar una página de crear cuenta
+     *no tenía sentido implementar una página de crear cuenta, peeeero, no funciona :D
     */
-    this.guardarUsuario();
+    //this.guardarUsuario();
     // this.autenticacion = this.bdlocal.autenticarUsuario(this.newUser.newUsuario, this.newUser.newPass);
     // if(this.autenticacion===true) {
     //   console.log('autenticado');
@@ -131,6 +131,7 @@ export class LoginPage implements OnInit {
         newUser: this.newUser 
       }
     };
+    this.router.navigate(["/home/micuenta"], navigationExtras)
     
     
   }
