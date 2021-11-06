@@ -1,13 +1,11 @@
-ion-content {
-  #map {
-    align-self: center;
-    width: 90%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 150ms ease-in;
-    display: block;
-    &.show-map {
-      opacity: 1;
-    }
+#map {
+  width: 90%;
+  height: 50%;
+  opacity: 0;
+  transition: opacity 150ms ease-in;
+  display: block;
+  margin: 0 auto;
+  &.show-map {
+    opacity: 1;
   }
 }

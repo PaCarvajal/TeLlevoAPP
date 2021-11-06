@@ -5,6 +5,14 @@ import { ServTellevoService } from 'src/app/serv-tellevo.service';
 
 declare let google;
 
+interface Marker {
+  position: {
+    lat: number;
+    lng: number;
+  };
+  title: string;
+}
+
 @Component({
   selector: 'app-comp-llevar',
   templateUrl: './comp-llevar.component.html',
@@ -119,16 +127,39 @@ export class CompLlevarComponent implements OnInit {
     // create a new map by passing HTMLElement
     const mapEle: HTMLElement = document.getElementById('map');
     // create LatLng object
-    const myLatLng = { lat: 4.658383846282959, lng: -74.09394073486328 };
+    const myLatLng = { lat: -33.04487773980582, lng: -71.43802134098559 };
     // create map
     this.map = new google.maps.Map(mapEle, {
       center: myLatLng,
       zoom: 12,
+      // disableDefaultUI: true,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: true,
     });
 
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       // this.renderMarkers();
       mapEle.classList.add('show-map');
+      const marker = {
+        position: {
+          lat: -33.04487773980582,
+          lng: -71.43802134098559,
+        },
+        title: 'Lugar uno',
+      };
+      this.addMarker(marker);
+    });
+  }
+
+  addMarker(marker: Marker) {
+    return new google.maps.Marker({
+      position: marker.position,
+      map: this.map,
+      title: marker.title,
     });
   }
 }

@@ -107,6 +107,14 @@
       "precio": "2123",
       "origen": "asdsa",
       "destino": "dsadsa"
+    },
+    {
+      "id": 17,
+      "viajeId": 17,
+      "hora": "2021-11-05T21:01:15.433-03:00",
+      "precio": "2432432",
+      "origen": "2432432",
+      "destino": "23432"
     }
   ]
 }
