@@ -10,13 +10,9 @@
               <p class="font-monR">Viajes disponibles </p>
               <ion-item>
                 <ion-select placeholder="Seleccione viaje" [(ngModel)]="viajes">
-                  <ion-select-option *ngFor="let vi of viajes" [value]= "vi.viajeId">{{vi.hora}}hrs</ion-select-option>
+                  <ion-select-option *ngFor="let vi of viajes" [value]="vi.viajeId">{{vi.hora}}hrs - ${{vi.precio}}</ion-select-option>
                 </ion-select>
               </ion-item>
-          </div>
-          <div style="padding-top: 2em;">
-              <p class="font-monR">Costo de viaje: </p>
-              <p class="font-monSB">$</p>
           </div>
       </ion-card-content>
   </ion-card>

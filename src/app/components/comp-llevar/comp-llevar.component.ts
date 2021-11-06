@@ -2,6 +2,7 @@ import { keyframes } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ServTellevoService } from 'src/app/serv-tellevo.service';
+import { GeolocationService } from '@ng-web-apis/geolocation';
 
 declare let google;
 
@@ -31,18 +32,33 @@ export class CompLlevarComponent implements OnInit {
   cant: any;
 
   map = null;
+  newPosition: {
+    lat: any;
+    lng: any;
+  };
 
   constructor(
     private api: ServTellevoService,
-    public alertController: AlertController
-  ) {}
+    public alertController: AlertController,
+    private readonly geolocation$: GeolocationService
+  ) {
+    geolocation$.subscribe((geoPosition) => {
+      console.log(geoPosition);
 
-  ngOnInit() {
-    this.loadMap();
+      let mark = {
+        lat: geoPosition.coords.latitude,
+        lng: geoPosition.coords.longitude,
+      };
+
+      this.addMarker(mark);
+    });
   }
+
+  ngOnInit() {}
 
   ionViewWillEnter() {
     this.getViajes();
+    this.loadMap();
   }
 
   getViajes() {
@@ -144,22 +160,14 @@ export class CompLlevarComponent implements OnInit {
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       // this.renderMarkers();
       mapEle.classList.add('show-map');
-      const marker = {
-        position: {
-          lat: -33.04487773980582,
-          lng: -71.43802134098559,
-        },
-        title: 'Lugar uno',
-      };
-      this.addMarker(marker);
     });
   }
 
-  addMarker(marker: Marker) {
+  addMarker(marker) {
     return new google.maps.Marker({
-      position: marker.position,
+      position: marker,
       map: this.map,
-      title: marker.title,
+      title: 'Pin 1',
     });
   }
 }

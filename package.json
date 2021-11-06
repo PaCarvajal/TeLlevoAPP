@@ -34,6 +34,8 @@
     "@ionic-native/google-maps": "^5.27.0-beta-20200630",
     "@ionic/angular": "^5.5.2",
     "@ionic/storage-angular": "^3.0.6",
+    "@ng-web-apis/common": "^1.12.1",
+    "@ng-web-apis/geolocation": "^1.0.4",
     "lottie-web": "^5.7.13",
     "ngx-lottie": "^7.0.3",
     "rxjs": "~6.6.0",
