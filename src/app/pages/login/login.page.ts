@@ -11,7 +11,7 @@ import { BDlocalService } from 'src/app/services/bdlocal.service';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup; //aqui le decimos que el login form es un form group
-  //+9/autenticacion: boolean;
+  autenticacion: boolean;
   newUser={ //aqui le indicamos que campos que usaremos con el navigationExtras (la password de momento no se utiliza)
     newUsuario:"",
     newPass:""
@@ -118,13 +118,13 @@ export class LoginPage implements OnInit {
      *no tenía sentido implementar una página de crear cuenta, peeeero, no funciona :D
     */
     //this.guardarUsuario();
-    // this.autenticacion = this.bdlocal.autenticarUsuario(this.newUser.newUsuario, this.newUser.newPass);
-    // if(this.autenticacion===true) {
-    //   console.log('autenticado');
-    //   this.router.navigate(['/home'])
-    // } else {
-    //   console.log('no autenticado');
-    // }
+    this.autenticacion = this.bdlocal.autenticarUsuario(this.newUser.newUsuario);
+    if(this.autenticacion==true) {
+      console.log('autenticado');
+      this.router.navigate(['/home'])
+    } else {
+      console.log('no autenticado');
+    }
 
     let navigationExtras: NavigationExtras = {
       state: {
