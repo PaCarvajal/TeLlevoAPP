@@ -9,7 +9,6 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class CompCuentaComponent implements OnInit {
   data: any;
-
   //Lottie animartion
   options:AnimationOptions = {
     path:'assets/car.json'
@@ -25,7 +24,9 @@ export class CompCuentaComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   salir(){
     this.router.navigate(['/login'])

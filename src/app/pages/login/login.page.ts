@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, EmailValidator } from '@angular/forms';
 import { Router, NavigationExtras } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
+import { BDlocalService } from 'src/app/services/bdlocal.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup; //aqui le decimos que el login form es un form group
-  
+  //+9/autenticacion: boolean;
   newUser={ //aqui le indicamos que campos que usaremos con el navigationExtras (la password de momento no se utiliza)
     newUsuario:"",
     newPass:""
@@ -25,7 +26,11 @@ export class LoginPage implements OnInit {
   }
   
 
-  constructor(private form: FormBuilder, private router: Router, public alertController:AlertController, public toast:ToastController) {
+  constructor(private form: FormBuilder, 
+              private router: Router, 
+              public alertController:AlertController, 
+              public toast:ToastController,
+              private bdlocal: BDlocalService) {
     }
   
     
@@ -107,17 +112,34 @@ export class LoginPage implements OnInit {
      * y lo que hace es enviar las credenciales por consola, navegar a la siguiente página y además utiliza el navigationExtras
      * para mandar el nombre de usuario a home y poder mostrarlo por pantalla*/
     console.log(this.loginForm.value);
+    /*esta función de guardar usuario se creó para poder guardar usuarios en el local storage que luego serán comparados con la
+     *autenticación, por lo tanto primero se activa esa, se guardan los usuarios a probar y luego se desactiva y se activa el bloque
+     *de autenticación. Esto fue desarrollado de esta manera por que se pretende utilizar las cuentas de duoc, por lo que
+     *no tenía sentido implementar una página de crear cuenta, peeeero, no funciona :D
+    */
+    //this.guardarUsuario();
+    // this.autenticacion = this.bdlocal.autenticarUsuario(this.newUser.newUsuario, this.newUser.newPass);
+    // if(this.autenticacion===true) {
+    //   console.log('autenticado');
+    //   this.router.navigate(['/home'])
+    // } else {
+    //   console.log('no autenticado');
+    // }
 
     let navigationExtras: NavigationExtras = {
       state: {
         newUser: this.newUser 
       }
     };
-    this.router.navigate(['/home/micuenta'], navigationExtras);
+    this.router.navigate(["/home/micuenta"], navigationExtras)
+    
+    
   }
 
 
   //este método permite validar que el usuario tenga al menos 3 caracteres
+  //se utiliza para el alert de recuperar contraseña, para evitar que se deje el usuario
+  //en blanco al presionar "enviar"
   validarUsuario(user: string) {
     if(user.length >=3){
       return {
@@ -131,8 +153,13 @@ export class LoginPage implements OnInit {
         }
     }
 }
+
+guardarUsuario() {
+  this.bdlocal.guardarUsuario(this.newUser.newUsuario, this.newUser.newPass);
 }
 
 
-  
+
+}
+
 
